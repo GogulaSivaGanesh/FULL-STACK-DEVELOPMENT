@@ -1,0 +1,40 @@
+@media screen and (max-width :900px){
+    .one{
+        height: 80%;
+        width: 100%;
+        background-color:lightgray;
+        border: 0px;
+        padding:2px;
+    }
+    
+    .two{
+        height: 77%;
+        width: 77%;
+        background-color: white;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }
+    
+}
+
+@media screen and (max-width :600px){
+    .one{
+        height: 80%;
+        width: 100%;
+        background-color:lightgray;
+        border: 0px;
+        padding:2px;
+    }
+    
+    .two{
+        height: 77%;
+        width: 77%;
+        background-color: white;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+    }
+    
+}
+

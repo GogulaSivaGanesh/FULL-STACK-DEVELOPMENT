@@ -1,0 +1,68 @@
+
+.one{
+	height: 80%;
+	width: 100%;
+	background-color:lightgray;
+	border: 0px;
+	padding:2px;
+}
+
+.two{
+	height: 80%;
+	width: 90%;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	padding: 50px;
+}
+#text1{
+	font-size: 20px;
+}
+#text2{
+	font-size: 15px;
+}
+#text3{
+	font-size: 10px;
+}
+form{
+	text-align: right;
+}
+footer{
+	height: 50px;
+	text-align: center;
+	background-color:lightgrey;
+	padding-top: 20px;
+}
+i{
+	font-size: 15px;
+}
+img{
+	height: 50px;
+	width: 100px;
+}
+nav{
+	word-spacing: 20px;
+}
+span{
+	background-color: lightyellow;
+}
+table{
+		border: 1px solid black;
+		width: 100%;
+		height: 130px;
+}
+table,th,td{
+	border-collapse:collapse ;
+}
+td{
+	padding-left: 20px;
+}
+th{
+	text-align: left;
+	padding-left: 20px;
+}
+textarea{
+	height: 150px;
+	width: 170px;
+}

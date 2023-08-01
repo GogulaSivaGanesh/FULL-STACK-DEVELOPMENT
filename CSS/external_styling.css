@@ -1,0 +1,273 @@
+/*class selector*/
+/*.one{
+	font-size: 50px;
+	text-align: center;
+	border: 5px solid saddlebrown;
+	color: darkred;
+	line-height: 200px;
+	background-color: lightblue;
+	height: 200px;
+}
+*/
+
+/*id selector*/
+/*#one{
+	font-size: 30px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+*/
+
+/*element selector*/
+/*body{
+	background-color: skyblue;
+	text-align: center;
+	font-size: 30px;
+}
+
+
+p{
+	color: red;
+	background-color: lightblue;
+	font-size: 50px;
+}*/
+
+
+/*universal selector*/
+/**{
+		cursor: none;
+		font-family: cursive;
+		margin: 0px;
+		padding: 0px;
+		background-color: lightblue;
+		text-align: center;
+}*/
+
+
+/*attribute selector*/
+/*input[type]{
+	background-color: yellow;
+}
+
+input[type="text"]{
+	color: red;
+}
+
+input[type="number"]{
+	color: skyblue;
+}
+
+input[type="pasword"]{
+	color: violet;
+}
+
+img[src]{
+	height: 200px;
+	width: 600px;
+}*/
+
+
+/*pseudo attribute*/
+/*a:link{
+	color:green;
+}
+a:visited{
+	color:pink;
+}
+a:hover{
+	color:yellowgreen;
+	font-size: 20px;
+}
+a:active{
+	color:yellow;
+}
+.z:hover{
+	border-color: #0c5dc0; 
+	box-shadow: 0 0 10px 3px #0c5dc0;
+}
+.z{
+	width: 200px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  line-height: 100px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: border-color 0.1s ease;
+}*/
+
+/* Border task 1*/
+/* .task{
+	height: 300px;
+	width: 400px;
+	border-width: 20px;
+	border-color: red;
+	border-style: dotted;
+}
+.task1{
+	height: 300px;
+	width: 400px;
+	background-color: hotpink;
+} */
+
+/* border task 2 */
+/* .main{
+	height: 700px;
+	width: 450px;
+}
+.main-left{
+	height: 100%;
+	width: 50%;
+	float: left;
+}
+.main-right{
+	height: 100%;
+	width: 50%;
+	float: right;
+}
+.main-left-1{
+	height: 130px;
+	width: 190px;
+	text-align: center;
+	border-style: dotted;
+	border-width: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.main-left-2{
+	height: 130px;
+	width: 190px;
+	border-style: solid;
+	border-width: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.main-left-3{
+	height: 130px;
+	width: 190px;
+	border-style: groove ;
+	border-width: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.main-left-4{
+	height: 130px;
+	width: 190px;
+	border-style: inset;
+	border-width: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.main-left-5{
+	height: 130px;
+	width: 190px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.main-right-1{
+	height: 130px;
+	width: 190px;
+	border-style: dashed;
+	border-width: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.main-right-2{
+	height: 130px;
+	width: 190px;
+	border-style: double;
+	border-width: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.main-right-3{
+	height: 130px;
+	width: 190px;
+	border-style: ridge ;
+	border-width: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.main-right-4{
+	height: 130px;
+	width: 190px;
+	border-style: outset;
+	border-width: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.main-right-5{
+	height: 130px;
+	width: 190px;
+	border: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+} */
+
+/* border task */
+
+/* .inner
+{
+	text-align: center;
+	font-size: 30px;
+	height: 80px;
+	width: 500px;
+	margin-top: 200px;
+	padding-top: 35px;
+	background-color: whitesmoke;
+}
+#outer
+{
+	box-shadow: 0 0 0 10px firebrick;
+	outline: 10px dashed darkturquoise;
+}
+
+.im{
+	float: right;
+	margin-left: -350px;
+	margin-right: 350px;
+	width: 400px;
+	height: 100%;
+	border: 10px solid;
+	border-image: url('bord.jpg') 35 fill / 35px stretch;
+} */
+
+/* margin class */
+/* h1{
+	background: lightblue;
+	border: 1px;
+	margin-top: 30px;
+	margin-left: 20px;
+}
+p{
+	background: skyblue;
+} */
+
+/*margin  task */
+
+.main{
+	height: 400px;
+	width: 800px;
+}
+.left{
+	height: 100%;
+	width: 200px;
+	float: left;
+	border: 3px solid black;
+	margin-left: 40px;
+	margin-right: 70px;
+}
+.center{
+	height: 100%;
+	width: 200px;
+	float: left;
+	border: 3px solid black;
+}
+.right{
+	float: right;
+	margin-left: 50px;
+	border: 3px solid black;
+	height: 100%;
+	width: 200px;
+}

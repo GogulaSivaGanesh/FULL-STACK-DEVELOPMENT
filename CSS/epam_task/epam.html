@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="one">
+<div class="two">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="epam.css">
+	
+	<title>epam</title>
+</head>
+<body>
+	<center><img src="epam.png" alt="epam image"></center>
+	<h1>HTML Elements</h1>
+	<hr>
+	<nav>
+		<a href="#">Home</a>
+		<a href="#Headers">Headers</a>
+		<a href="#Table">Table</a>
+		<a href="#List">List</a>
+		<a href="#Text">Text-formats</a>
+		<a href="#Block">Blockquotes</a>
+	</nav><hr>
+	<p>Pay attention to h1 tag inside section element.Font-size for h1 is the same as font-size for h2,because we have to use only one h1 on the page, and it is commonly used inside header</p>
+	<div id="Headers">
+		<h2>Header 2</h2>
+		<h3>Header 3</h3>
+		<h4>Header 4</h4>
+		<h5>Header 5</h5>
+		<h6>Header 6</h6>
+	</div>
+	<hr>
+	<div>
+		<p>
+		Lorem ipsum dolor sit amet,<a href="#">test link </a>adipiscing elit.<strong>This is strong</strong>. Nullam dignissim convallis est. Quisque aliquam.This is <emphasized> emphasized</emphasized>. Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>0. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.<i> The New York Times</i> (That's a citation).<underline>Underline</underline>. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante.Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue <big>quis tellus</big></p>
+		<p>HTML and CSS are our tools. Mauris a ante.<span>Suspendisse</span> quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type COPY filename.<del>Dinner's at 5:00</del>.<mark> Let's make that 7.</mark> This text has been struck.</p>
+	</div><hr>
+	<div id="Table">
+		<h1>Table</h1>
+		<table border="">
+			<tr>
+				<th>Header</th>
+				<th>Header</th>
+				<th>Header</th>
+			</tr>
+			<tr>
+				<td>lviv</td>
+				<td>Kyiv</td>
+				<td>Kharkiv</td>
+			</tr>
+			<tr>
+				<td>Odessa</td>
+				<td>Zhytomyr</td>
+				<td>Dnipro</td>
+			</tr>
+			<tr>
+				<td>Sumy</td>
+				<td>Chernivtsi</td>
+				<td>lutsk</td>
+			</tr>
+		</table>
+	</div>
+	<div id="List">
+		<h2>Unordered List</h2>
+		<ul>
+			<li>List item 1</li>
+			<li>List item 1</li>
+			<ul type="disc	">
+				<li>Some nested list item 1</li>
+			</ul>
+			<li>List item 3</li>
+		</ul>
+	</div>
+	<div>
+		<h2>Ordered List</h2>
+		<ol>
+			<li>List item 1</li>
+			<li>List item 1</li>
+			<ol type="A">
+				<li>Some nested list item 1</li>
+			</ol>
+			<li>List item 3</li>
+		</ol>
+	</div>
+	<div>
+		<h2>Definition List</h2>
+		<dl>
+			<b><dt>defines term 1</dt></b>
+			<dd>description 1</dd>
+			<b><dt>defines term 2</dt></b>
+			<dd>description 2</dd>
+		</dl>
+		<label>Details</label>
+		<select>
+			<option>HTML</option>
+			<option>CSS</option>
+			<option>JAVASCRIPT</option>
+		</select>
+	</div>
+	<hr>
+	<div id="Text">
+		<h2>Text formats</h2>
+		<p id="text1">Article title</p>
+		<p id="text2">Article title</p>
+		<p id="text3">Article description</p>
+	</div>
+	<h4>Preformatted Text</h4>
+	<div class="one">
+		<pre>                    Text
+		in a pre element
+			is displayed in a fixed-width
+		font, and it preserves
+		both
+		  spaces and
+			line breaks</pre>
+	</div>
+	<h4>code</h4>
+	<div class="one">
+		<pre>
+			.wrapper{
+				display: flex;
+				vertical-align: middle;
+				justify-content: center;
+			}
+		</pre>
+	</div>
+	<div id="Blockquotes">
+		<h3>Blockquotes</h3>
+		<p>Let's keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
+		<blockquote>
+			<p>
+			<i>"Ifyou go back a few hundred years, what we take for granted today would seem like magic-being able to talk to people over long distances, to transmit images, flying, accessing vast amounts of data like an oracle. These are all things that would have been considered magic a few hundred years ago. "<br>
+			<a href="https://en.wikipedia.org/wiki/Elon_Musk" target="_blank"> Elon Musk</a></i></p>
+		</blockquote>
+	</div><hr>
+	<div>
+		<form>
+			<label>First name:</label>
+			<input type="text" required><br>
+			<label>Surname:</label>
+			<input type="text" required><br>
+			<label>Email:</label>
+			<input type="email" required><br>
+			<textarea required></textarea><br>
+			<button>Submit</button>
+		</form>
+	</div>
+	<div>
+		<footer>&copyCopyright Epam Systems</footer>
+	</div>
+</body>
+</div>
+</html>

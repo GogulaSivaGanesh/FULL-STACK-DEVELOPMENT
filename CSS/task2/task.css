@@ -1,0 +1,321 @@
+.one{
+    height: 1043px;
+    width: 100%;
+    background-image: url(images/img1.png);
+}
+.one1{
+    height: 30%;
+    width: 100%;
+    text-align: right;
+}
+/*background-image{
+    height: 100%;
+    width: 100%;
+}*/
+.two{
+    background-color:#76abf6;
+    height: 650px;
+    width: 100%;
+}
+.heading{
+    color: rgb(237, 136, 42);
+    font-size: 100px;
+    word-spacing: 2px;
+    text-align: right;
+    margin-bottom: 0.3em;
+    padding-right: 50px;
+    font-family: Raleway;   
+}
+#onep{
+    text-align: right;
+    font-size: 23px;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    padding-right: 50px;
+    border: 0px;
+}
+.button{
+    margin-top: 0.3em;
+    height: 35px;
+    width: 140px;
+    color: white;
+    border-top: 10px;
+    font-size: 20px;
+    border-radius: 80px;
+    background-color: #76abf6;
+    text-align: center;
+    padding-top: 10px;
+    float: right;
+    margin-right: 40px;
+}
+.twh{
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 60px;
+    margin-bottom: 0.2em;
+    font-family: Raleway;
+}
+.twh1{
+    text-align: center;
+    color: white;
+    letter-spacing: 8px;
+    margin-top: 0.2em;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+.twot{
+    height: 100px;
+    width: 100%;
+    font-family: Raleway;
+}
+.travel{
+    background-color: #92bcf5;
+    border-radius: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    float: left;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-top: 50px;
+    height: 350px ;
+    width: 18%;
+    margin-bottom: 5px;
+}
+.benefits{
+    background-color: white;
+    border-radius: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    height: 350px ;
+    width: 18%;
+    margin-bottom: 5px;
+}
+.aboutus{
+    background-color: #92bcf5;
+    border-radius: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    height: 350px ;
+    width: 18%;
+    margin-bottom: 5px;
+}
+.awards{
+    background-color: rgb(255, 255, 255);
+    border-radius: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    float: right;
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-top: 50px;
+    height: 350px ;
+    width: 18%;
+    margin-bottom: 5px;
+}
+.trt{
+    height: 22%;
+    width: 35%;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 50%;
+    background-color: white;
+    background-image: url(images/travel2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.trb{
+    margin-top: -10px;
+    padding: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Raleway;
+}
+.trbh{
+    font-size: 20px;
+    letter-spacing: 5px;
+
+}
+.trbp{
+    
+    margin-left: 3px;
+    text-align:left;
+    font-size: 15px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height:25px ;
+   
+}
+body{
+    font-family: Raleway;
+}
+.th1{
+    height: 90%;
+    width: 100%;
+}
+.th2{
+    height: 10%;
+    width: 100%;
+}
+.th1t{
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+.th1tl{
+    height: 50%;
+    width: 100%;
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 0px;
+}
+.th1tlp{
+    font-family: raleway Black 900;
+    font-weight: 900;
+    line-height: 60px;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-style: bold;
+
+}
+.th1tli{
+    font-size: 30px;
+}
+.col{
+    color: #92bcf5;
+}
+.th1tr{
+    height: 50%;
+    width: 100%;
+    background-image: url(images/img2_5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 10px;
+    margin-left: -20px;
+    margin-right: -100px;
+    
+}
+.th1bl{
+    height: 100%;
+    width: 40%;
+    float: left;
+}
+.th1br{
+    height: 100%;
+    width: 60%;
+    float: right;
+    text-align: center;
+}
+.th1b{
+    height: 50%;
+    width: 100%;
+}
+ul{
+    list-style: none;
+  }
+ul li:before {
+    content:'✅ ';
+  }
+#lef{
+    float: left;
+}
+.th1blp1{
+    color: grey;
+    font-size: 20px;
+    line-height: 30px;
+}
+.th1blp2{
+    font-size: 20px;
+    line-height: 30px;
+    font-family: raleway Black 800;
+    font-weight: 900;
+}
+.th2{
+    height: 10%;
+    width: 9%;
+    border-radius: 50%;
+    margin-top: -100px;
+    background-color:#92bcf5 ;
+}
+.three{
+    height: 1043px;
+    width: 100%;
+}
+.three_top{
+    height: 90%;
+    width: 100%;
+}
+.three_bottom{
+    height: 100%;
+    width: 100%;
+}
+.three_top_left{
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+.three_top_right{
+    height: 100%;
+    width: 50%;
+    float: right;
+}
+.three_top_left_up{
+    height: 50%;
+    width: 100%;
+}
+.three_top_left_down{
+    height: 50%;
+    width: 100%;
+}
+.three_top_right_up{
+    height: 50%;
+    width: 100%;
+}
+.three_top_right_down{
+    height: 50%;
+    width: 100%;
+}
+.three_bottom{
+    height: 10%;
+    width: 9%;
+    border-radius: 50%;
+    margin-top: -100px;
+    margin-left: 40px;
+    background-color:#92bcf5 ;
+}
+.four{
+    height: 700px;
+    width: 100%;
+    background-color: #92bcf5;
+    
+}
+.fol{
+    height: 100%;
+    width: 60%;
+    float: left;
+}
+.foli{
+    margin-top: 90px;
+    margin-left: 60px;
+}
+.for{
+    height: 100%;
+    width: 40%;
+    float: right;
+    margin-left: -100px;
+}
