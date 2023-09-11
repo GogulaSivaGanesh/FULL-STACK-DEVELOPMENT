@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression</title>
+</head>
+<body>
+    <h2>Regular expressions</h2>
+    <script>
+        // let str = 'siva'
+        // let re = /drive/;
+        // let output = re.test('drive ready')
+        // console.log(output);
+
+        // let re1 = /drive/i;//i is use for neglect the case sensitive.
+        // let output1 = re1.test('DRIVE ready')
+        // console.log(output1);
+
+        // re2 = /^b/;
+        // output2 = re2.test("batch");
+        // output3 = re2.test("tbatch");
+        // console.log(output2)
+        // console.log(output3)
+
+
+        // re4 = /batch/g; //g for multiple indexes.
+        // res = re4.exec("Full stack bacth course batch");
+        // console.log(res);
+        // console.log(res.index)
+        // res1 = re4.exec("full stack batch course batch");
+        // console.log(res1);
+        // console.log(res1.index)
+
+        // if(output == true){
+        //     console.log('Valid')
+        // }else{
+        //     console.log("not a valid")
+        // }
+
+        // numbers
+        re1 = /^[0-9]{10}/   //valid upto 10 number but exceeded the range.
+        re2 = /^[0-9]{10}$/  //valid upto 10 number not exceeded range by $.
+        re3 = /^[9][0-9]{9}$/ 
+        output = re1.test("7842775209123");
+        output1 = re2.test("7842775209");
+        output2 = re3.test("7842775209");
+        console.log(output);
+        console.log(output1);
+        console.log(output2)
+
+    </script>
+</body>
+</html>

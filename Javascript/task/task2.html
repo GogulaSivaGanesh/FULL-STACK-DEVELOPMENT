@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+</head>
+<body>
+    <label>Enter Name:</label>&nbsp;
+    <input type="text" id="ins_id"  onkeyup="sample(this.value)" ><br><br>
+    <span id="sp_id"> </span>
+    <script>
+        function sample(str){
+            sp=document.getElementById('sp_id')
+            z=document.getElementById('ins_id')
+            // if(str.length===0){
+            //     sp.innerText='Please enter the name';
+            //     sp.style.color='red';
+            //     sp.style.fontSize='100px'
+            //     z.style.outline='3px solid red'
+            // }
+            if(str.length<=3){
+                sp.innerText='Please enter more than 3 characters';
+                sp.style.color='red';
+                sp.style.fontSize='100px'
+                z.style.outline='3px solid red'
+            }else{
+                sp.innerText='';
+                z.style.outline='1px solid black'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+</head>
+<body>
+    <h3>Keyboard Events</h3>
+    <ul>
+        <li>Key down</li>
+        <li>Key up</li>
+        <li>Key press</li>
+    </ul>
+    <form>
+        <span id="sp_id"></span><br>
+        <label >Key down</label>
+        <input type="text" name="" value="" onkeydown="sample(this.value)">
+        <br>
+        <br><br>
+        <label>key up</label>
+        <input type="text" name="" value="" onkeyup="sample(this.value)">
+        <br><br>
+        <label>key press</label>
+        <input type="text" name="" value="" onkeypress="sample(this.value)">
+    </form>
+    <script>
+        function sample(color_value) {
+            document.getElementById('sp_id').innerText=color_value
+            document.body.style.backgroundColor=color_value
+        }
+    </script>
+</body>
+</html>

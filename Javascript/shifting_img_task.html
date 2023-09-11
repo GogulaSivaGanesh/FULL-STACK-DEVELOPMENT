@@ -1,0 +1,309 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+</head>
+<body>
+    <center>
+        <div style="height: 900px;width: 1200px;">
+            <div style="height: 300px;width: 400px;float: left; background-color: green;">
+                <div style="height: 200px; width: 100%; border: 1px solid black;">
+                    <img src="">
+                
+                </div>
+                <div style="height: 200px; width: 100%; border: 1px solid black;margin: 10px 0px; ">
+                    <img src="">
+                
+                </div>
+                <div style="height: 200px; width: 100%; border: 1px solid black;">
+                    <img src="">
+                
+                </div>
+
+            </div>
+
+            <div style="height: 300px;width: 400px;float: left; background-color: rgb(107, 107, 193);"></div>
+
+            <div style="height: 300px;width: 400px;float: right; background-color: red;">
+                <div style="height: 200px; width: 100%;">
+                    <img src="">
+                
+                </div>
+                <div style="height: 200px; width: 100%;">
+                    <img src="">
+                
+                </div>
+                <div style="height: 200px; width: 100%;">
+                    <img src="">
+                
+                </div>
+
+            </div>
+            
+        </div>
+    </center>    
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Box Navigation</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .box {
+      border: 1px solid #000;
+      padding: 10px;
+    }
+    .image {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .empty-box {
+      border: 1px dashed #aaa;
+      height: 100px;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="image" onclick="moveImage(this, 'box2')">Image 1</div>
+      <div class="image" onclick="moveImage(this, 'box2')">Image 2</div>
+      <div class="image" onclick="moveImage(this, 'box2')">Image 3</div>
+    </div>
+    <div class="box">
+      <div class="empty-box" onclick="moveImageBack(this)"></div>
+      <div class="empty-box" onclick="moveImageBack(this)"></div>
+    </div>
+  </div>
+  <div>
+    <button onclick="navigate('prev')">Previous</button>
+    <button onclick="navigate('next')">Next</button>
+  </div>
+  <script>
+    let currentBox = 'box1';
+    let selectedImages = [];
+
+    function moveImage(imageElement, destinationBox) {
+      selectedImages.push(imageElement);
+      imageElement.remove();
+      updateEmptyBoxes();
+    }
+
+    function moveImageBack(emptyBox) {
+      if (selectedImages.length > 0) {
+        const imageToMove = selectedImages.pop();
+        emptyBox.appendChild(imageToMove);
+        updateEmptyBoxes();
+      }
+    }
+
+    function updateEmptyBoxes() {
+      const emptyBoxes = document.querySelectorAll(`.${currentBox} .empty-box`);
+      emptyBoxes.forEach((emptyBox, index) => {
+        emptyBox.innerHTML = '';
+        if (selectedImages[index]) {
+          emptyBox.appendChild(selectedImages[index]);
+        }
+      });
+    }
+
+    function navigate(direction) {
+      if (direction === 'next') {
+        currentBox = currentBox === 'box1' ? 'box2' : 'box1';
+      } else if (direction === 'prev') {
+        currentBox = currentBox === 'box1' ? 'box2' : 'box1';
+      }
+      updateEmptyBoxes();
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Image Appender</title>
+  <style>
+    .container {
+  display: flex;
+  height: 100px;
+  width: 500px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.left img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="small_project/b1.jpeg" alt="Image 1">
+      <img src="small_project/b1.jpeg" alt="Image 2">
+      <img src="small_project/b1.jpeg" alt="Image 3">
+    </div>
+    <div class="center">
+      <button id="leftButton">Left</button>
+      <button id="rightButton">Right</button>
+    </div>
+    <div class="right"></div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const leftImages = document.querySelectorAll('.left img');
+  const leftButton = document.getElementById('leftButton');
+  const rightButton = document.getElementById('rightButton');
+  const rightDiv = document.querySelector('.right');
+
+  let selectedImage = null;
+
+  leftImages.forEach(img => {
+    img.addEventListener('click', () => {
+      selectedImage = img.cloneNode(true);
+    });
+  });
+
+  rightButton.addEventListener('click', () => {
+    if (selectedImage) {
+      rightDiv.appendChild(selectedImage);
+      selectedImage = null;
+    }
+  });
+});
+
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Box Navigation</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .box {
+      border: 1px solid #000;
+      padding: 10px;
+    }
+    .image {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .empty-box {
+      border: 1px dashed #aaa;
+      height: 100px;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="image" onclick="moveImage(this, 'box2')">Image 1</div>
+      <div class="image" onclick="moveImage(this, 'box2')">Image 2</div>
+      <div class="image" onclick="moveImage(this, 'box2')">Image 3</div>
+    </div>
+    <div class="box">
+      <div class="empty-box" onclick="moveImageBack(this)"></div>
+      <div class="empty-box" onclick="moveImageBack(this)"></div>
+    </div>
+  </div>
+  <div>
+    <button onclick="navigate('prev')">Previous</button>
+    <button onclick="navigate('next')">Next</button>
+  </div>
+  <script>
+    let currentBox = 'box1';
+    let selectedImages = [];
+
+    function moveImage(imageElement, destinationBox) {
+      selectedImages.push(imageElement);
+      imageElement.remove();
+      updateEmptyBoxes();
+    }
+
+    function moveImageBack(emptyBox) {
+      if (selectedImages.length > 0) {
+        const imageToMove = selectedImages.pop();
+        emptyBox.appendChild(imageToMove);
+        updateEmptyBoxes();
+      }
+    }
+
+    function updateEmptyBoxes() {
+      const emptyBoxes = document.querySelectorAll(`.${currentBox} .empty-box`);
+      emptyBoxes.forEach((emptyBox, index) => {
+        emptyBox.innerHTML = '';
+        if (selectedImages[index]) {
+          emptyBox.appendChild(selectedImages[index]);
+        }
+      });
+    }
+
+    function navigate(direction) {
+      if (direction === 'next') {
+        currentBox = currentBox === 'box1' ? 'box2' : 'box1';
+      } else if (direction === 'prev') {
+        currentBox = currentBox === 'box1' ? 'box2' : 'box1';
+      }
+      updateEmptyBoxes();
+    }
+  </script>
+</body>
+</html>

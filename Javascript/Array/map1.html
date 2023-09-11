@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+        <ol id="list">
+
+        </ol>
+    <table border="" id="table_id" cellspacing="0">
+        <!-- <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> -->
+    </table>
+    <script>
+        let trainees1 = [
+            {
+                name:'raju',
+                rollno:'1234'
+            },{
+                name:'siva',
+                rollno:'2345'
+            }]
+
+        // //my_task(method1)
+        // let a = document.getElementsByTagName('td')
+        // var j=0;
+        // trainees1.map(function(each_trainee,i,arr){
+        //     a[j].innerText+=i+1
+        //     j++
+        //     a[j].innerText+=each_trainee.name;
+        //     j++;
+        //     a[j].innerText+=each_trainee.rollno;
+        //     j++;
+        // })
+
+        // // sir(method)
+        // let tr=''
+        // trainees1.map(function(each_trainee,i,arr){
+        //     tr+="<tr><td>"+(i+1)+"</td><td>"+each_trainee.name+"</td><td>"+each_trainee.rollno+"</td></tr>";
+        // })
+        // // console.log(tr)
+        // document.getElementById('table_id').innerHTML = tr;
+
+
+        
+        let li=''
+        trainees1.map(function(each_trainee,i,arr){
+            li+="<li><ul><li>"+each_trainee.name+"</li><li>"+each_trainee.rollno+"</li></ul></li><br>";
+        })
+        document.getElementById('list').innerHTML = li;
+    </script>
+</body>
+</html>

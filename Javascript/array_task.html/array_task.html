@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        function evenNum(n) {
+            return n%2 == 0;
+        }
+        function mul(item, index, arr) {
+            arr[index] = item * 10;
+        }
+        function sum(total, num) {
+            return total + num;
+        }
+        const a = [100,16,64,9]
+        document.write('Original array:'+a+'<br>');
+        document.write('Using map() method(check even or not): '+a.map(evenNum)+'<br><br>')
+        document.write('Original array:'+a+'<br>');
+        document.write('Using filter() method(print only even number): '+a.filter(evenNum)+'<br><br>')
+        document.write('Original array:'+a+'<br>');
+        document.write('Using sort() method: '+a.sort(function(a, b){return a-b})+'<br><br>')
+        document.write('Original array:'+a+'<br>');
+        a.forEach(mul)
+        document.write('Using forEach() method(each element is multiply by 10): '+a+'<br><br>')
+        let b = [1,2,3,4]
+        document.write("orginal array1:"+a+'<br>')
+        document.write("orginal array2:"+b+'<br>')
+        document.write('Using concat() method: '+a.concat(b)+'<br><br>')
+        document.write('Original array:'+b+'<br>');
+        document.write('Using every() method(check every element if even or notthen return true when all are even): '+b.every(evenNum)+'<br><br>')
+        document.write('Original array:'+b+'<br>');
+        document.write('Using some() method(check some elements are even or not the return true where any one element satisfies the condition): '+b.some(evenNum)+'<br><br>')
+        document.write('Original array:'+b+'<br>');
+        document.write('Using includes() method(check whether 3 is present in the array or not): '+b.includes(3)+'<br><br>')
+        document.write('Original array:'+b+'<br>');
+        document.write('Using join() method(join the elements with and): '+b.join(' and ')+'<br><br>')
+        const r1 = [15, 2, 11, 47];
+        document.write('Original array:'+r1+'<br>');
+        document.write('Using reduce() method(return the sum): '+r1.reduce(sum)+'<br><br>')
+        document.write('Original array:'+b+'<br>');
+        document.write('Using find() method(find a even number in the array): '+b.find(evenNum)+'<br><br>')
+        document.write('Original array:'+b+'<br>');
+        document.write('Using findIndex() method(find the even number index  in the array): '+b.findIndex(evenNum)+'<br><br>')
+        document.write('Original array:'+b+'<br>');
+        document.write('Using indexOf() method(return the index of 3): '+b.indexOf(3)+'<br><br>')
+        document.write('Original array:'+r1+'<br>');
+        document.write('Using fill() method(fill the number 10 after the index 2 and 2 also): '+r1.fill(10,2)+'<br><br>')        
+        document.write('Original array:'+b+'<br>');
+        document.write('Using slice() method(slice from 0 to 2 index): '+b.slice(0,2)+'<br><br>')
+        document.write('Original array:'+r1+'<br>');
+        document.write('Using reverse() method: '+r1.reverse()+'<br><br>')
+        document.write('Original array:'+r1+'<br>');
+        document.write('Using push() method:'+r1.push(100) +'<br> the new array after push '+r1+'<br><br>')
+        document.write('Original array:'+r1+'<br>');
+        document.write('Using pop() method: '+r1.pop()+'<br> the new array after pop '+r1+'<br><br>')
+        document.write('Original array:'+r1+'<br>');
+        document.write('Using shift() method: '+r1.shift()+'<br> the new array after shift(delete the element at first index) '+r1+'<br><br>')
+        document.write('Original array:'+r1+'<br>');
+        document.write('Using unshift() method: '+r1.unshift(100)+'<br> the new array after unshift(insert the element at first index)'+r1+'<br><br>')
+    </script>
+</body>
+</html>

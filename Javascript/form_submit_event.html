@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p>
+
+<form id="myForm">
+  First name: <input type="text" name="fname" id="fname_id"><br>
+  Last name: <input type="text" name="lname" id="lname_id"><br><br>
+  <select name="colleges">
+  	<option>--select colleges ---</option>
+  	<option value="AEC">AEC</option>
+  	<option value="ACET">ACET</option>
+  	<option value="ACOE">ACOE</option>
+  </select><br><br>
+  <input type="radio" value="male" name="gender">Male<br>
+  <input type="radio" value="female" name="gender">Female<br>
+  <input type="button" onclick="formsubmit()" value="Submit form">
+
+</form>
+
+<script>
+function formsubmit(){
+	if(fname == ''){
+                alert("Enter the First name")
+                return false;
+            }
+            if(lname == ''){
+                alert("Enter the last name")
+                return false;
+            }
+            if(clg == ''){
+                alert("select the college")
+                return false;
+            }
+	let form = document.getElementById('myForm');
+	form.submit();
+	
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression example</title>
+</head>
+<body>
+    <label>Enter the Gmail</label>
+    <input type="text" id="txt_id"><br>
+    <!-- <button onclick="valid()" id="check_valid" >valid</button><br> -->
+    <button onclick="ckeck_characterornot()" id="check_valid" >valid</button><br>
+    <span id="msg_id"></span>
+    <script>
+        function valid(){
+            let a = document.getElementById('txt_id').value;
+            re = /^[6-9][0-9]{9}$/; 
+            output = re.test(a);
+            if(output == true){
+                document.getElementById('msg_id').innerText = "Correct";
+                document.getElementById('msg_id').style.color = 'green';
+            }else{
+                let res = document.getElementById('msg_id').innerText = "Please Enter the correct format";
+                document.getElementById('msg_id').style.color  = 'red';
+            }
+        }
+        function check_characterornot(){
+            // re = /^[a-z]+$/ //only small letters
+            // re = /^[A-Z]+$/ //only big letters
+            // re = /^[a-zA-Z]+$/ //small and big letters
+            // re = /^[a-zA-Z0-9]+$/; //alpha numeric characters
+            re = /^\w+@[a-zA-Z_]+?\.[a-zA-Z][2,3]$/; //alpha numeric characters
+            let a = document.getElementById('txt_id').value;
+            output = re.test(a);
+            if(output == true){
+                document.getElementById('msg_id').innerText = "Correct";
+                document.getElementById('msg_id').style.color = 'green';
+            }else{
+                let res = document.getElementById('msg_id').innerText = "Please Enter the correct format";
+                document.getElementById('msg_id').style.color  = 'red';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            color: rgb(245, 241, 241);
+        }
+        td{
+           text-align: center;
+           padding: 15px;
+           font-size: 25px;
+           background-color: rgb(14, 14, 14);
+           border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <center>
+    <table border="2" cellspacing="5" cellpadding="15px" width="350px" bgcolor="skyblue">
+        <tr>
+            <td colspan="4" style="height: 50px;text-align: right;" id="result_id"></td>
+        </tr>
+        <tr >
+            <td onclick="getnum('9')">9</td>
+            <td onclick="getnum('8')">8</td>
+            <td onclick="getnum('7')">7</td>
+            <td onclick="getnum('/')">/</td>
+        </tr>
+        <tr >
+            <td onclick="getnum('6')">6</td>
+            <td onclick="getnum('5')">5</td>
+            <td onclick="getnum('4')">4</td>
+            <td onclick="getnum('*')">x</td>
+        </tr>
+        <tr >
+            <td onclick="getnum('3')">3</td>
+            <td onclick="getnum('2')">2</td>
+            <td onclick="getnum('1')">1</td>
+            <td onclick="getnum('-')">-</td>
+        </tr>
+        <tr >
+            <td onclick="getnum('0')">0</td>
+            <td onclick="Clear()">C</td>
+            <td onclick="getnum('=')">=</td>
+            <td onclick="getnum('+')">+</td>
+        </tr>
+    </table>
+    </center>
+    <script>
+        function getnum(val){
+            if(val=='='){
+                //document.write(eval(val))
+                let res = document.getElementById('result_id').innerText;
+                document.getElementById('result_id').innerText=eval(res);
+
+            }else{ 
+                document.getElementById('result_id').innerText+=val;
+            }            
+        }
+        function Clear(){
+            document.getElementById('result_id').innerText=''
+        }
+    </script>
+    
+</body>
+</html>

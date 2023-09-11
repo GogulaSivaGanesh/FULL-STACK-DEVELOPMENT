@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <script>
+        let a = 'FullStackDeveloper'
+        document.write('Original string: '+a+'<br>')
+        document.write('using substr method: '+a.substr(1,4)+'<br><br>')
+        document.write('Original string: '+a+'<br>')
+        document.write('using substring method: '+a.substring(1,4)+'<br><br>')
+        document.write('Original string: '+a+'<br>')
+        document.write('using replace method: '+a.replace('Developer','development')+'<br><br>')
+        document.write('Original string: '+a+'<br>')
+        document.write('using search method (searching for k character): '+a.search('k') +'<br><br>')
+        let b = 'THIS IS THUB'
+        document.write('original string: '+b+'<br>')
+        document.write('using toLocalelowerCase() method: '+b.toLocaleLowerCase()+'<br><br>')
+        let c = 'this is thub'
+        document.write('original string: '+c+'<br>')
+        document.write('using toLocaleUpperCase() method: '+b.toLocaleUpperCase()+'<br><br>')
+        document.write('original string: '+c+'<br>')
+        document.write('using indexof method(index of s): '+c.indexOf('s')+'<br><br>')
+        document.write('original string: '+c+'<br>')
+        document.write('using includes method(checking this is present in string or not): '+c.includes('thub')+'<br><br>')
+        document.write('original string: '+c+'<br>')
+        document.write('using slice method(index of 0 to 3): '+c.slice(0,3)+'<br><br>')
+        let c1 = 'Good'
+        let c2 = ' morning'
+        document.write('original string1: '+c1+'<br>')
+        document.write('original string2: '+c2+'<br>')
+        document.write('using concate method(concate of string1 and string2): '+c1.concat(c2) +'<br><br>')
+        document.write('original string: '+c+'<br>')
+        document.write('using lastIndexOf() method(checking index of s): '+c.lastIndexOf('s') +'<br><br>')
+        document.write('original string: '+c+'<br>')
+        document.write('using charCodeAt() method(given index 0 ): '+c.charCodeAt(0) +'<br><br>')
+        let t1 = '    hello    '
+        document.write('original string:'+t1+' '+t1.length+'<br>')
+        document.write('using trim() method: '+t1.trim()+' ' +(t1.trim()).length+'<br><br>')
+        document.write('original string: '+c+'<br>')
+        document.write('using charAt() method(given index 0 ): '+c.charAt(0) +'<br><br>')
+        let v1 = '10'
+        document.write('original string: '+v1+'<br>')
+        document.write('using valueOf() method: '+v1.valueOf() +'<br><br>')
+        let s1 = 'hi good morning,to all!'
+        document.write('original string: '+s1+'<br>')
+        document.write('using split() method: '+s1.split(' ') +'<br><br>')
+        let num = 10;
+        document.write('original string: '+num+' '+typeof(num)+'<br>')
+        document.write('using toString() method(given index 0 ): '+num.toString()+' '+typeof(num.toString()) +'<br><br>')
+        let text = "The rain in SPAIN stays mainly in the plain";
+        document.write("Original string:"+text+'<br>');
+        document.write("using match() method: "+text.match(/ain/gi));
+        
+
+        
+        
+
+    </script>
+</body>
+</html>

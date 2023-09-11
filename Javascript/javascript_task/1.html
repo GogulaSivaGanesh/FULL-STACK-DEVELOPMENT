@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types</title>
+</head>
+<body>
+    <p>Javascript Data types</p>
+    <ol>
+        <ul>
+            <p>1. Primitive Data types</p>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul>
+            <p>2. Non primitive data types</p>
+            <li>Array:</li>
+            <li></li>
+            
+        </ul>
+    </ol>
+    <script>
+        let a1 = 10;
+        let a2 = 'string';
+        let a3 = false;
+        let a4 = 10.56;
+        let a5 = [1,2,3,4]
+        let a6 = {firstname:'siva',Lastname:'Gogula'}
+        var l= document.getElementsByTagName('li');
+        var a=[a1,a2,a3,a4,a5,a6]
+        for(let i=0;i<6;i++)
+        {
+            let res = "Data type: "+typeof(a[i])+ " Example: "+a[i];
+            l[i].innerText+=res
+        }
+    </script>
+</body>
+</html>

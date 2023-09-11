@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | events</title>
+</head>
+<body>
+    <button id="btn_id">show</button>
+    <button id="hide">hide</button>
+    <p id="text"></p>
+    <script>
+        let btn = document.getElementById('btn_id')
+        let btn1 = document.getElementById('hide')
+        btn.onclick= show
+        btn1.onclick = hide
+        function show(){
+             //document.style.display="block";
+             let a=document.getElementById('text')
+             a.innerText='hii'
+        }
+        function hide(){
+             document.getElementById('text').style.display="none";
+        }
+
+        // //with function name ("we should not call test()")
+        // btn.onclick =test
+        // function test() {
+        //     alert('test...')
+        // }
+
+        // //with anonymous function.
+        // btn.onclick = function(){
+        //     alert("testing..")
+        // }
+
+
+    </script>
+</body>
+</html>

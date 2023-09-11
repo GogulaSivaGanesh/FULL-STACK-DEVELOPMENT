@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <script>
+        class Student{
+            constructor(rno,fname,lname,clg){
+                this.rollno = rno;
+                this.firstname = fname;
+                this.lastname = lname;
+                this.college = clg;
+                this.getFullName = function(){
+                    return this.firstname+" "+this.lastname;
+                }
+            }
+        }
+        class Car{
+            constructor(com,col,seat,mile){
+                this.company = com;
+                this.color = col;
+                this.seating = seat;
+                this.milage = mile
+            }
+        }
+        let obj = new Student(12344,'Siva Ganesh','Gogula','AEC');
+        document.write('<b>'+obj.getFullName()+'<b>')
+        let obj1 = new Student(344,'Siva','G','AEC');
+        let car1 = new Car('BMW','Black',4,30);
+        console.log(obj.rollno,obj.firstname,obj.lastname,obj.college);
+        console.log(car1.company,car1.color,car1.seating,car1.milage);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <script>
+        //We have 3 kind of declaration variable.
+        //1.var -- global scope variable.
+        //2.let -- block scope variable.(it cann't be redeclared and it can be reassigned(re initalization).)
+        //3.const -- fixed value and cann't be changed (or) it cann't be redeclared.
+
+
+        // var a = 10;
+        // document.write(a);
+        // let b = 2; 
+        // b=3;
+        // document.write(b);
+
+        // //block scope variable
+        // {
+        //     let same='block scope variable';
+        //     //document.write(same);
+        // }
+        // //we cann't be access the variable outside the block.
+        // //document.write(same);
+
+        // const pi=3.14;
+        // document.write(pi);
+        // const id_card='21a91a05d4'
+        // document.write(id_card)
+
+        var n1 = "siva"
+        document.write("var variable in main page " + n1+"<br>");
+        let z="ganesh";
+        document.write("let variable in main page " + z +"<br>");
+        const job = 'FSD';
+        document.write("const variable in main page" + job +"<br>");
+        {
+            document.write("var variable in a particular block " + n1+"<br>");
+            document.write("let variable in particular  block " + z +"<br>");
+            document.write("const variable in particular block" + job +"<br>");
+            var n2 = "G.Siva Ganesh"
+            let z1='Siva Ganesh'
+            const c1 = "Constant value"
+            document.write("var variable in a particular block " + n2 +"<br>");
+            document.write("let variable in particular  block " + z1 +"<br>");
+            document.write("const variable in particular block" + c1 +"<br>");
+        }
+
+        document.write("var variable in a main block " + n1+"<br>");
+        document.write("let variable in main  block " + z +"<br>");
+        document.write("const variable in main block" + job +"<br>");
+        document.write("var variable in a main block " + n2 +"<br>");
+        document.write("let variable in main block " + z1 +"<br>");
+        document.write("const variable in main block" + c1 +"<br>");
+
+
+
+    </script>
+</body>
+</html>

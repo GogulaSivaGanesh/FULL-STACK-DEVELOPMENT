@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <table border="1px solid black">
+        <tr>
+            <td>d</td>
+            <td>r</td>
+            <td>i</td>
+            <td>v</td>
+            <td>e</td>
+            <td>&nbsp;</td>
+            <td>r</td>
+            <td>e</td>
+            <td>a</td>
+            <td>d</td>
+            <td>y</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>-11</td>
+            <td>-10</td>
+            <td>-9</td>
+            <td>-8</td>
+            <td>-7</td>
+            <td>-6</td>
+            <td>-5</td>
+            <td>-4</td>
+            <td>-3</td>
+            <td>-2</td>
+            <td>-1</td>
+        </tr>
+    </table>
+    <script>
+        let str = 'drive ready'
+        function example(str_name) {
+            document.write('<b>'+str_name+'</b><br><br>')
+        }
+        // let t = document.getElementsByTagName('td')
+        // for (let i = 0; i < str.length; i++) {
+        //     td[i].innerText=str[i];
+        // }
+
+        example('orginal string: '+str)
+        example('String length: '+str.length)        
+        example(str[3])
+        example("indexOf method is used to tell the index value of the given charater:  "+str.indexOf('e'))
+        example("charAt method which tells that chatracter present at given index value: "+str.charAt('2'))
+        example('lastIndexOf is the method is used to tell the last index of a particular character: '+str.lastIndexOf('e'))
+        let str1 = ' siva '
+        //trim() remove the space from left to right
+        example(str1+str1.length)
+        example(str1+str1.trim().length)
+        //for lowercase
+        let str2 = 'DRIVE READY'
+        example("lower case: "+str2.toLowerCase())
+        //for upper case
+        let str3 = 'drive ready'
+        example("lower case: "+str3.toUpperCase())
+        //concatenation method
+        let str4 = 'Siva';
+        let str5 = " Ganesh";
+        let str6 =' Gogula'
+        example(str4.concat(str5,str6))
+        //includes=> returns boolean value
+        let str7 = 'FSD drive ready afternoon batch'
+        example(str7.includes('afternoon'))//true
+        example(str7.includes('hi'))//false
+        //converting string into an array
+        let str8 = 'siva ganesh'
+        let str9 = 'ram&raju,rani'
+        document.write(str8.split('')+'<br>');
+        console.log(str8.split(''))
+        console.log(str9.split(','))
+        console.log(str9.split('&')) 
+        //starts with =>return the boolean value.
+        let str10 = 'siva'
+        example("starts with: "+str10.startsWith('s'))//true
+        example("starts with: "+str10.startsWith('z'))//false
+        //ends with =>return the boolean value.
+        let str11 = 'Ganesh'
+        example("starts with: "+str11.endsWith('h'))//true
+        example("starts with: "+str11.endsWith('z'))//false
+        
+        //slice method 
+        //stringname.slice('startpos','endpos-1')
+        example('slice method: '+ str.slice(1,4))
+        example('slice method: '+ str.slice(-9,-1))
+        example('slice method: '+ str.slice(-5,-4))
+
+        //substring method
+        //it allows only positive index.
+        example('substring method: '+str.substring(1,4))//=(1,4-1)=(1,3)//riv
+        example('substring method: '+str.substring(4,1))//4,1 =1,4 //riv
+        example('substring method: '+str.substring(-1))//complete string will come
+
+        //substr method = substr(startpos,length of the characters from 1st arg position)
+        example('substr method: '+str.substr(1,4))//rive
+        example('substr method: '+str.substr(1,6))//rive r
+    </script>
+</body>
+</html>

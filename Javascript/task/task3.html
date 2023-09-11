@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <style>
+        option{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <select style="width: 400px;height: 50px;" onchange="sample(this.value)">
+            <option value="">--------Select college---------</option>
+            <option value="AEC">AEC</option>
+            <option value="ACET">ACET</option>
+            <option value="ACOE">ACOE</option>
+        </select>
+        <p id="p_id"></p>
+    </center>
+    <script>
+        function sample(clg_name) {
+            document.getElementById('p_id').innerText=clg_name;
+            v="2"+3+6 ; console.log(v) ;
+            console.log("5" *3)
+        }
+    </script>
+</body>
+</html>

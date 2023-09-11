@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sum</title>
+</head>
+<body>
+    <script>
+        let a=[]
+        let b= prompt("enter the length of the array:")
+        let sum=0
+        let z1 = prompt("enter the array each number is separated by comma")
+        for(let i=0;i<z1.length;i++){
+            if(z1[i]==','){
+                continue
+            }else{
+                a.push(parseInt(z1))
+                sum+=parseInt(z1[i])
+            }
+        }
+        document.write(a)
+        if(sum%2 === 0){
+            var res='even sum'
+        }else{
+            var res='odd sum'
+        }
+        document.write('the given array sum is '+res)
+    </script>
+</body>
+</html>

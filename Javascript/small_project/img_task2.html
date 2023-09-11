@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img</title>
+    <style>
+        img{
+            margin: 50px 480px;
+        }
+    </style>
+</head>
+<body>
+    <img id="new" onmouseover="image()" onmouseout="im()" src="b1.jpeg">
+    <script>
+        function image(){
+            document.getElementById('new').src='b3.jpeg';
+        }
+        function im(){
+            document.getElementById('new').src='b1.jpeg';
+        }
+    </script>
+</body>
+</html>

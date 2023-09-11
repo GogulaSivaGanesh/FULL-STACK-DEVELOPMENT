@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table with JavaScript Functionalities</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <h1>Product Details</h1>
+    <button class="btn btn-success mt-3" id="add-row">Add Row</button>
+    <table class="table" id="data-table">
+      <thead>
+        <tr>
+            <th>Product Id</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>  
+  <script>
+    function addRow() {
+      const tableBody = document.querySelector('#data-table tbody');
+      const newRow = `
+        <tr>
+            <td contenteditable="false">Product Id</td>
+          <td contenteditable="false">New Name</td>
+          <td contenteditable="false">New Email</td>
+          <td>
+            <button class="btn btn-link edit-row" title="Edit"><i class="fas fa-edit"></i></button>
+            <button class="btn btn-link delete-row" title="Delete"><i class="fas fa-trash-alt"></i></button>
+          </td>
+        </tr>
+      `;
+      tableBody.insertAdjacentHTML('beforeend', newRow);
+    }
+    function enableEdit(row) {
+      const cells = row.querySelectorAll('td[contenteditable="false"]');
+      cells.forEach(cell => cell.setAttribute('contenteditable', 'true'));
+    }
+    function disableEdit(row) {
+      const cells = row.querySelectorAll('td[contenteditable="true"]');
+      cells.forEach(cell => cell.setAttribute('contenteditable', 'false'));
+    }
+    function deleteRow(row) {
+      row.remove();
+    }
+    document.getElementById('add-row').addEventListener('click', addRow);
+
+    document.addEventListener('click', function (event) {
+      const target = event.target;
+
+      if (target.classList.contains('edit-row')) {
+        const row = target.closest('tr');
+        if (!row.isEditing) {
+          target.innerHTML = '<i class="fas fa-save"></i>';
+          enableEdit(row);
+          row.isEditing = true;
+        } else {
+          target.innerHTML = '<i class="fas fa-edit"></i>';
+          disableEdit(row);
+          row.isEditing = false;
+        }
+      } else if (target.classList.contains('delete-row')) {
+        const row = target.closest('tr');
+        deleteRow(row);
+      }
+    });
+  </script>
+</body>
+</html>

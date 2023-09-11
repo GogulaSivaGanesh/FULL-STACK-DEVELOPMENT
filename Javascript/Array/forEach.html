@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach method</title>
+</head>
+<body>
+    <h3>Array Method | forEach()</h3>
+    <p>this method not creates any new array and return it after iteration will completed.</p>
+    <script>
+        let sal = [10000,20000,30000,40000]
+        sal.forEach(function(amount,index,arr){
+            var inc = amount/10
+            console.log(inc)
+            arr[index] = amount + inc
+        });
+        console.log(sal)
+    </script>
+</body>
+</html>

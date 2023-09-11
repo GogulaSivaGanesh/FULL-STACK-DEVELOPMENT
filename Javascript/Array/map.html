@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <h3>Array Methods | map()</h3>
+    <p>This method creates new Array and return it after iteration will completed.</p>
+    <script>
+        let trainees = ['ramu','raju','ramesh','rajesh'];
+        let arr1 = trainees.map(function(ele,i,old_arr) {
+            return "Dear "+ele
+        })
+        console.log(arr1)
+    </script>
+</body>
+</html>

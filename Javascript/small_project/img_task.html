@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img</title>
+    <style>
+        img{
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 400px; width: 100%; border: 1px solid black;">
+        <div style="float: left; height: 100%; width: 70%; border: 1px solid black; ">
+            <div style="height: 100%; width: 33%; float: left; ">
+                <img onclick="getimg('b1.jpeg')" src="b1.jpeg">
+            </div>
+            <div style="height: 100%; width: 33%; float: left;">
+                <img onclick="getimg('b2.jpeg')" src="b2.jpeg">
+            </div>
+            <div style="height: 100%; width: 33%; float: left;">
+                <img onclick="getimg('b3.jpeg')" src="b3.jpeg">
+            </div>
+        </div>
+        <div id="get" style=" width: 20%; float: right;  border: 1px solid black;"></div>
+    </div> 
+    <script>
+        function getimg(val){
+            let res= document.getElementById('get')
+            res.innerHTML="<img src="+ val+'>'
+        }
+    </script>
+</body>
+</html>

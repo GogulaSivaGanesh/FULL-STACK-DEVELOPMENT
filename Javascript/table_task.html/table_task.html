@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table with JavaScript Functionalities</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    #add-row{
+      margin-left: 85%;
+      border-radius: 20px;
+    }
+    button{
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>Product Details</h2>
+    <button class="btn btn-success mt-3" id="add-row">+ Add Row</button>
+    <table class="table" border="1px solid black" id="data-table">
+      <thead>
+        <tr>
+          <th>Product Id</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td contenteditable="false">456789</td>
+          <td contenteditable="false">Realme mobile</td>
+          <td contenteditable="false">16000</td>
+          <td>
+            <button class="btn btn-link edit-row" title="Edit"><i class="fa-solid fa-pen" style="font-size:30px;color: #ffe605;"></i></button>
+            <button class="btn btn-link delete-row" title="Delete"><i class="fa-solid fa-trash" style="font-size:30px;color: #ed5e5e;"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td contenteditable="false">123456</td>
+          <td contenteditable="false">MI mobile</td>
+          <td contenteditable="false">18000</td>
+          <td>
+            <button class="btn btn-link edit-row" title="Edit"><i class="fa-solid fa-pen" style="font-size:30px;color: #ffe605;"></i></button>
+            <button class="btn btn-link delete-row" title="Delete"><i class="fa-solid fa-trash" style="font-size:30px;color: #ed5e5e;"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td contenteditable="false">365648</td>
+          <td contenteditable="false">Vivo mobile</td>
+          <td contenteditable="false">20000</td>
+          <td>
+            <button class="btn btn-link edit-row" title="Edit"><i class="fa-solid fa-pen" style="font-size:30px;color: #ffe605;"></i></button>
+            <button class="btn btn-link delete-row" title="Delete"><i class="fa-solid fa-trash" style="font-size:30px;color: #ed5e5e;"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function addRow() {
+      const tableBody = document.querySelector('#data-table tbody');
+      const newRow = `
+        <tr>
+          <td contenteditable="false"></td>
+          <td contenteditable="false"></td>
+          <td contenteditable="false"></td>
+          <td>
+            <button class="btn btn-link edit-row" title="Edit"><i class="fa-solid fa-pen" style="font-size:30px;color: #ffe605;"></i></button>
+            <button class="btn btn-link delete-row" title="Delete"><i class="fa-solid fa-trash" style="font-size:30px;color: #ed5e5e;"></i></button>
+          </td>
+        </tr>
+      `;      
+      tableBody.insertAdjacentHTML('beforeend', newRow);
+    }
+    function enableEdit(row) {
+      const cells = row.querySelectorAll('td[contenteditable="false"]');
+      cells.forEach(cell => cell.setAttribute('contenteditable', 'true'));
+    }
+    function disableEdit(row) {
+      const cells = row.querySelectorAll('td[contenteditable="true"]');
+      cells.forEach(cell => cell.setAttribute('contenteditable', 'false'));
+    }
+    function deleteRow(row) {
+      let res = confirm('Do you want to delete the record')
+      if (res === true) {
+        row.remove();
+        }
+    }
+    document.getElementById('add-row').addEventListener('click', addRow);
+    document.addEventListener('click', function (event) {
+      const target = event.target;
+      if (target.classList.contains('edit-row')) {
+        const row = target.closest('tr');
+        if (!row.isEditing) {
+          target.innerHTML = '<i class="fas fa-save" style="font-size:30px;color: #68f36a;"></i>';
+          enableEdit(row);
+          row.isEditing = true;
+        } else {
+          target.innerHTML = '<i class="fa-solid fa-pen" style="font-size:30px;color: #ffe605;"></i>';
+          disableEdit(row);
+          row.isEditing = false;
+        }
+      } else if (target.classList.contains('delete-row')) {
+        const row = target.closest('tr');
+        deleteRow(row);
+      }
+    });
+  </script>
+</body>
+</html>
